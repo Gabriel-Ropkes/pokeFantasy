@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS Nav -->
+    <link rel="stylesheet" href="css/nav.css" />
+    <!-- CSS Footer -->
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- CSS PokeDex -->
+    <link rel="stylesheet" href="css/pokedex.css" />
+    <!-- CSS Pokemon-->
+    <link rel="stylesheet" href="css/pokemon.css" />
+    <!-- CSS Responsivity -->
+    <link rel="stylesheet" href="css/responsivity.css" />
+    <!-- CSS Common -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- JS -->
+    <script defer src="script.js"></script>
+    <script defer src="js/dex.js"></script>
+    <script defer src="pokemon.js"></script>
+    <title>PokeFantasy</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <nav class="hide">
+      <p class="announce">Este site não é Oficial</p>
+      <ul class="nav-container">
+        <a href="home.html">
+          <li id="News" class="start">
+            <p>Home</p>
+          </li>
+        </a>
+        <a href="index.html">
+          <li id="Pokedex" class="med-1">
+            <p>PokéDex</p>
+          </li>
+        </a>
+        <a href="PokéFantasy">
+          <li id="Pokefantasy" class="med-2">
+            <p>PokéFantasy</p>
+          </li>
+        </a>
+        <a href="evs.html">
+          <li id="EVseIVs" class="final">
+            <p>EV's e IV's</p>
+          </li>
+        </a>
+      </ul>
+      <!-- Change After -->
+    </nav>
+
+    <section class="background">
+      <section id="pokedex" class="background-color hide">
+        <div class="dex-overview">
+          <div id="dexContainer" class="dex-container">
+            <a href="create.html" class="random">
+              <div id="newCard">
+                <p>New Card</p>
+                <i class="fas fa-plus"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <footer>
+          <section class="random">
+            <img src="img/PokéFantasy.png" alt="" />
+          </section>
+          <section class="footer-social">
+            <div class="social-icons">
+              <button class="icon">
+                <i class="fab fa-discord"></i>
+              </button>
+              <button class="icon">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button class="icon">
+                <i class="fab fa-youtube"></i>
+              </button>
+            </div>
+            <p class="copyright">&#169; Direitos reservados a Froga.</p>
+          </section>
+          <section class="footer-links">
+            <a href="">
+              <p>FAQ</p>
+            </a>
+            <a href="">
+              <p>Sobre Nós</p>
+            </a>
+            <a href="">
+              <p>Sei lá</p>
+            </a>
+            <a href="">
+              <p>Sei lá</p>
+            </a>
+          </section>
+        </footer>
+      </section>
+      <div id="backgroundPreview" class="view">
+        <div class="closeBtnContainer">
+          <i class="fas fa-xmark closeBtn"></i>
+        </div>
+
+        <article id="movesetContainer">
+          <div id="moves">
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+            <div class="move-container">
+              <img class="move" src="img/ember-move.webp" alt="" />
+              <p>Nv. 58</p>
+            </div>
+          </div>
+          <div id="movesetTitle">
+            <p>
+              <i class="fas fa-arrow-right"></i>Moveset<i
+                class="fas fa-arrow-right"
+              ></i>
+            </p>
+          </div>
+        </article>
+
+        <section id="previewContainer">
+          <div id="toggleContent">
+            <div class="toggleTitle">
+              <p>Info</p>
+            </div>
+            <div class="toggleTitle">
+              <p>Drop</p>
+            </div>
+            <div class="toggleTitle active">
+              <p>Resp</p>
+            </div>
+          </div>
+          <div id="previewInfo">
+            <div id="previewPokeCard" class="poke-card">
+              <div id="top" class="top">
+                <div id="topBar" class="top-bar">
+                  <p id="pokeName" class="pokeName">Growlithe</p>
+                  <p id="pokeNumber" class="pokeNumber">#058</p>
+                </div>
+                <div class="poke-image-placeholder" id="pokeImgBg">
+                  <img
+                    class="pokemon-image"
+                    src="img/Arcanine.png"
+                    id="pokeImg"
+                  />
+                </div>
+              </div>
+              <div id="data" class="data">
+                <div id="types" class="types">
+                  <div class="type fire">Fire</div>
+                </div>
+                <h4 id="statsTitle" class="baseStats">Base Stats</h4>
+                <div id="pokeStatus" class="stats">
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="stat-row">
+                    <p class="stat-desc">Hp</p>
+                    <p class="stat-number">90</p>
+                    <div class="stat-bar">
+                      <div class="bar-outer">
+                        <div class="bar-inner"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="weak-ability">
+              <div id="weaknesses">
+                <div id="weakTitle">
+                  <p>Weakness</p>
+                </div>
+                <div id="weakContent">
+                  <div class="weakline">
+                    <p>4</p>
+                  </div>
+                  <div class="weakline">
+                    <p>2</p>
+                    <p>Water</p>
+                    <p>Rock</p>
+                    <p>Groun</p>
+                  </div>
+                  <div class="weakline">
+                    <p>1</p>
+                    <p>Norm</p>
+                    <p>Elec</p>
+                    <p>Fight</p>
+                    <p>Poisn</p>
+                    <p>Psyc</p>
+                    <p>Fly</p>
+                    <p>Ghost</p>
+                    <p>Drago</p>
+                    <p>Dark</p>
+                  </div>
+                  <div class="weakline">
+                    <p>0.5</p>
+                    <p>Fire</p>
+                    <p>Gras</p>
+                    <p>Ice</p>
+                    <p>Bug</p>
+                    <p>Steel</p>
+                    <p>Fairy</p>
+                  </div>
+                  <div class="weakline">
+                    <p>0.25</p>
+                  </div>
+                  <div class="weakline">
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+              <div id="abilitiesContent">
+                <p id="abilitiesTitle">Abilities</p>
+                <p class="abilities">Wonder Guard</p>
+                <p class="abilities">Guts</p>
+                <p class="abilities">Superpower</p>
+              </div>
+            </div>
+            <div id="evoShiny">
+              <div id="evolineContent">
+                <div class="evolineImgContainer">
+                  <img src="img/Gyarados.png" alt="" />
+                  <div class="evolineText">
+                    <p>Gyarados</p>
+                    <p>Nv. 20</p>
+                  </div>
+                </div>
+                <div class="evolineImgContainer">
+                  <img src="img/Gyarados.png" alt="" />
+                  <div class="evolineText">
+                    <p>Gyarados</p>
+                    <p>Nv. 20</p>
+                  </div>
+                </div>
+                <div class="evolineImgContainer">
+                  <img src="img/Gyarados.png" alt="" />
+                  <div class="evolineText">
+                    <p>Gyarados</p>
+                    <p>Nv. 20</p>
+                  </div>
+                </div>
+              </div>
+              <div id="shiny">
+                <img class="other-forms" src="img/Ponyta.png" alt="" />
+                <img class="other-forms" src="img/Growlithe.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div id="previewDrop">
+            <ul class="commonList">
+              <p class="list-title">Todos os Drops</p>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+            </ul>
+            <div id="dropContent">
+              <div id="dropCard">
+                <div id="dropName">Bulb</div>
+                <div id="dropImg">
+                  <img src="img/item.png" alt="" />
+                </div>
+
+                <div id="dropData">
+                  <p id="dropType">Generic</p>
+                  <p class="drop-info">Value: <span>$365.00</span></p>
+                  <p class="drop-info">Value: <span>$365.00</span></p>
+                  <p class="drop-info">Value: <span>$365.00</span></p>
+                </div>
+              </div>
+              <div id="dropDesc">
+                <p id="dropDescTitle">Description</p>
+                <p id="dropDescInfo">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Officiis consequatur non velit cupiditate autem omnis,
+                  laboriosam, aperiam dolores quia natus repudiandae, harum
+                  expedita distinctio dignissimos quas quos explicabo voluptate
+                  a.
+                </p>
+              </div>
+            </div>
+            <ul class="commonList">
+              <p class="list-title">Todos que Dropam</p>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+            </ul>
+          </div>
+          <div id="previewResp">
+            <ul id="respList" class="commonList">
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+            </ul>
+            <div id="previewContent">
+              <img class="respImg" src="img/mapa.webp" alt="" />
+            </div>
+            <ul class="commonList">
+              <p class="list-title">Todos que Dropam</p>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.background {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #fff url(../img/background.png);
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+/* Dashboard-content */
+.background .background-color {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}

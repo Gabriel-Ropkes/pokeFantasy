@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,500;0,600;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root {
+  /* === Colors === */
+
+  --text-color: #000;
+  --black-light-color: #707070;
+  --shadow-red: #e3350d;
+  --white-color: #ffffff;
+
+  /* ==== Transition ==== */
+  --tran-05: all 0.5s ease;
+  --tran-03: all 0.3s ease;
+  --tran-02: all 0.2s ease;
+}
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #fff url(../img/background.png);
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+/* Notice Components */
+.notice-img {
+  width: 100%;
+  height: 100%;
+}
+.notice-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.5s all;
+  color: white;
+  padding: 10px;
+  font-size: 1.4rem;
+}
+.principal-notice .notice-title {
+  height: 12.5%;
+}
+.secondary-notice .notice-title {
+  height: 20%;
+}
+.notice-title h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* Page Bg */
+.background .background-color {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.background-color.hide {
+  display: none;
+}
+.background-color .home-overview {
+  box-sizing: border-box;
+  background: #fff url(../img/background.png);
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+  padding: 140px 50px;
+}
+/* Page Content */
+.home-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  row-gap: 15px;
+  background-color: white;
+  box-shadow: 0px 2px 5px 2px black;
+  border-radius: 15px;
+  padding: 20px 0;
+}
+.home-container .principal-notice {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 90%;
+  height: 350px;
+  cursor: pointer;
+}
+.principal-notice:hover .notice-title {
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.list-notices {
+  display: flex;
+  flex-flow: row;
+  height: 200px;
+  width: 90%;
+  column-gap: 10px;
+}
+.list-notices .secondary-notice {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  transition: var(--tran-05);
+  cursor: pointer;
+}
+.secondary-notice:hover {
+  border: 1px solid black;
+}
+.secondary-notice:hover .notice-title {
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.9);
+}

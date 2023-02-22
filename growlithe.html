@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- UNICONS -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/pokemon.css" />
+
+    <!-- JS -->
+    <script defer src="pokemon.js"></script>
+
+    <title>Pokémon</title>
+  </head>
+  <body>
+    <section class="dashboard">
+      <!-- Header -->
+      <header>
+        <div class=""></div>
+        <ul class="nav-links">
+          <a href="home.html">
+            <li id="News" class="start">
+              <i class="uil uil-diary-alt"></i>
+              <span class="nav-link">Pagina Inicial</span>
+            </li>
+          </a>
+          <a href="index.html">
+            <li id="Pokedex" class="med-1">
+              <i class="uil uil-diary-alt"></i>
+              <span class="nav-link">PokéDex</span>
+            </li>
+          </a>
+          <img class="logo" src="img/PokéFantasy.png" alt="" />
+          <a href="PokéFantasy">
+            <li id="Pokefantasy" class="med-2">
+              <i class="uil uil-diary-alt"></i>
+              <span class="nav-link">PokéFantasy</span>
+            </li>
+          </a>
+          <a href="EVseIVs">
+            <li class="final">
+              <i class="uil uil-diary-alt"></i>
+              <span class="nav-link">EV's e IV's</span>
+            </li>
+          </a>
+        </ul>
+        <i class="uil uil-bars menu"></i>
+        <!-- Change After -->
+      </header>
+
+      <div class="dash-content">
+        <div class="overview">
+          <div class="title-div uppercase">
+            <div class="align-items row-reverse hidden-media">
+              <img class="preview-pokemon" src="img/Ponyta.png" alt="" />
+              <a href="#Ponyta">
+                <span class="titleNumber">N° 105</span>
+                <br />
+                <span class="preview">Ponyta</span>
+              </a>
+              <i class="uil uil-arrow-left preview"></i>
+            </div>
+            <span class="text uppercase">Growlithe</span>
+            <div class="align-items hidden-media">
+              <img class="next-pokemon" src="img/Arcanine.png" alt="" />
+              <a href="#Arcanine">
+                <span class="titleNumber">N° 060</span>
+                <br />
+                <span class="next">Arcanine</span>
+              </a>
+              <i class="uil uil-arrow-right next"></i>
+            </div>
+          </div>
+          <div class="boxes">
+            <div id="pokeInfo" class="pokeInfo info-box">
+              <p class="info-title">Status Base</p>
+              <div class="pokeStats auto">
+                <div id="hp" class="status flex-row">
+                  <span class="stats-text uppercase">Hp:</span>
+                  <span class="stats-number uppercase">50</span>
+                </div>
+                <div id="attack" class="status flex-row">
+                  <span class="stats-text uppercase">Attack:</span>
+                  <span class="stats-number uppercase">120</span>
+                </div>
+                <div id="defense" class="status flex-row">
+                  <span class="stats-text uppercase">Defense:</span>
+                  <span class="stats-number uppercase">1040</span>
+                </div>
+                <div id="sp.atk" class="status flex-row">
+                  <span class="stats-text uppercase">Sp.Atk:</span>
+                  <span class="stats-number uppercase">1040</span>
+                </div>
+                <div id="sp.def" class="status flex-row">
+                  <span class="stats-text uppercase">Sp.Def:</span>
+                  <span class="stats-number uppercase">1040</span>
+                </div>
+                <div id="speed" class="status flex-row">
+                  <span class="stats-text uppercase">Speed:</span>
+                  <span class="stats-number uppercase">1040</span>
+                </div>
+              </div>
+            </div>
+            <div id="pokeImg" class="box">
+              <img class="fire" src="img/Growlithe.png" alt="" />
+            </div>
+            <div id="moveset" class="info-box">
+              <p class="info-title">Moveset</p>
+              <div id="moves1" class="moves">
+                <div class="move-background">
+                  <img class="move" src="img/ember-move.webp" alt="" />
+                  <div class="right moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower theasdfsadfsadfsadfas
+                        sadfsadfdsaftarget's Defense by 1 stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="right moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Nome</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">---</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">---</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">--%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">--s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Type</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>Descrição.</p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red"> Efeitos. </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="right moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-top moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/poison-move.png" alt="" />
+                  <div class="right moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="right moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="right moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="move-background">
+                  <img class="move" src="img/dungeon.png" alt="" />
+                  <div class="moveOn-info-bottom moveOn-info-tr">
+                    <ul id="attr" class="attributes-list">
+                      <li>
+                        <span class="tcolor-red">Ember</span>
+                      </li>
+                      <li>
+                        <p>Power:</p>
+                        <span class="tcolor-red">40</span>
+                      </li>
+                      <li>
+                        <p>PP:</p>
+                        <span class="tcolor-red">6.20</span>
+                      </li>
+                      <li>
+                        <p>Acc:</p>
+                        <span class="tcolor-red">100%</span>
+                      </li>
+                      <li>
+                        <p>Cd:</p>
+                        <span class="tcolor-red">3s</span>
+                      </li>
+                    </ul>
+
+                    <div id="icon" class="cat-type">
+                      <img class="cat" src="img/Physical.png" alt="" />
+                      <span class="type ground">Ground</span>
+                    </div>
+
+                    <div id="desc" class="description">
+                      <p>
+                        Has a 50% chance to lower the target's Defense by 1
+                        stage.
+                      </p>
+                    </div>
+
+                    <div id="effect" class="effect">
+                      <span class="tcolor-red">
+                        This may also leave the target with a burn
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="alternative-evolution">
+            <div class="alternative info-box">
+              <p class="info-title">Alternative Forms</p>
+              <div class="alternative-line flex-row">
+                <img class="fire" src="img/Growlithe.png" alt="" />
+                <img class="fire" src="img/Growlithe.png" alt="" />
+              </div>
+            </div>
+
+            <div class="evolution info-box">
+              <p class="info-title">Evolutionary Chain</p>
+              <div class="evolution-line flex-row">
+                <a href="growlithe.html">
+                  <img class="fire" src="img/Growlithe.png" alt="" />
+                </a>
+                <div class="evomethod">
+                  <img src="img/stone-fire.png" alt="" />
+                </div>
+                <a href="arcanine.html">
+                  <img class="fire" src="img/Arcanine.png" alt="" />
+                </a>
+                <div class="evomethod">
+                  <img src="img/stone-fire.png" alt="" />
+                </div>
+                <a href="arcanine.html">
+                  <img class="fire" src="img/Arcanine.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="drop-resp">
+            <div class="resp-list info-box">
+              <p class="info-title">Respawn</p>
+              <div class="resps">
+                <p>Route 09 <span>Nvl 12 ~ 15</span></p>
+                <p>Route 09 <span>Nvl 12 ~ 15</span></p>
+                <p>Route 09 <span>Nvl 12 ~ 15</span></p>
+              </div>
+            </div>
+
+            <div class="drop-list info-box">
+              <p class="info-title">Drops</p>
+              <div class="items">
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="item">
+                    <img src="img/item.png" alt="" />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer title-div">
+            <div class="align-items row-reverse hidden-reverse-media">
+              <img class="preview-pokemon" src="img/Ponyta.png" alt="" />
+              <a href="#Ponyta">
+                <span class="titleNumber">N° 105</span>
+                <br />
+                <span class="preview">Ponyta</span>
+              </a>
+              <i class="uil uil-arrow-left preview"></i>
+            </div>
+            <div class="align-items hidden-reverse hidden-reverse-media">
+              <img class="next-pokemon" src="img/Arcanine.png" alt="" />
+              <a href="#Arcanine">
+                <span class="titleNumber">N° 060</span>
+                <br />
+                <span class="next">Arcanine</span>
+              </a>
+              <i class="uil uil-arrow-right next"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

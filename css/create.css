@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+}
+.background {
+  display: flex;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #9e9999 url(../img/background.png);
+  clear: both;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+#createContainer {
+  overflow: hidden;
+  width: 90vw;
+  height: 90vh;
+  padding: 0 10px 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 2px;
+}
+#createContainer h1 {
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 2px solid rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
+  font-size: 1.6rem;
+  text-align: center;
+  cursor: context-menu;
+  height: 40px;
+}
+#create-content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: pink;
+  padding: 10px;
+}
+#create-card {
+  width: 12rem;
+  height: 100%;
+  border: 5px solid rgb(75, 75, 75);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+#createImg {
+  display: none;
+}
+#createImg:hover {
+  border-color: black;
+  background-color: white;
+}
+#createImgLabel {
+  width: 10rem;
+  height: 40%;
+  border: 5px solid rgb(75, 75, 75);
+  border-radius: 15px;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  overflow: hidden;
+}
+#createImgContent {
+  color: rgb(75, 75, 75);
+  transition: 0.5s ease;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#createImgLabel:hover {
+  border-color: black;
+}
+#createImgLabel:hover #createImgContent {
+  color: black;
+}
+.poke-img {
+  width: 100%;
+  height: 100%;
+}
+#createStatus {
+  width: 100%;
+  height: 60%;
+}
+.create-stat-row {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+}
+.create-stat-row .stat-text {
+  width: 25%;
+  margin-right: 5px;
+  border-right: 2px solid rgb(75, 75, 75);
+}
+.create-stat-row .create-stat-number {
+  width: 20%;
+  height: 80%;
+  text-align: center;
+  color: black;
+  border: 1px solid rgb(75, 75, 75);
+  border-radius: 5px;
+  outline: none;
+}
+.create-stat-number:focus {
+  border-color: black;
+}
+.bar-out {
+  margin-left: 5%;
+  width: 50%;
+  background-color: rgb(75, 75, 75, 0.4);
+  height: 8px;
+  border-radius: 7.5px;
+}
+.bar-in {
+  position: relative;
+  width: 60%;
+  background-color: rgb(75, 75, 75);
+  height: 100%;
+  border-radius: 7.5px;
+}
+.bar-circle {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: rgb(75, 75, 75);
+  border-radius: 50%;
+  right: 0;
+  bottom: -2.5px;
+  cursor: grab;
+}
+#create-evoline {
+  width: 10rem;
+}
+#create-evoline .evoline {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  height: calc(30% - 40px);
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  border-radius: 10px;
+}
+.evoline img {
+  width: 30%;
+  height: 70%;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: grab;
+}
+#create-evoline select {
+  width: 100%;
+  height: 30px;
+  border: 2px solid rgb(75, 75, 75);
+  border-radius: 5px;
+  background-color: orange;
+  outline: none;
+}

@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  /* === Colors === */
+  --border-color-header1: #4dad5b;
+  --border-color-header2: #e6bc2f;
+  --border-color-header3: #ee6b2f;
+  --border-color-header4: #e3350d;
+
+  --text-color: #000;
+  --black-light-color: #707070;
+  --dark-red: #e3350d;
+  --white-color: #ffffff;
+
+  /* ==== Transition ==== */
+  --tran-05: 0.5s ease-in-out;
+  --tran-03: all 0.3s ease-in-out;
+  --tran-02: all 0.2s ease-in-out;
+}
+body {
+  min-height: 100vh;
+  width: calc(100vw - 10px);
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+@keyframes cardHover {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 4px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 359deg;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Some Color */
+:root {
+  --rock: rgb(182, 158, 49);
+  --ghost: rgb(112, 85, 155);
+  --steel: rgb(183, 185, 208);
+  --water: rgb(100, 147, 235);
+  --grass: rgb(76, 203, 72); /* Era 116, 203, 72 */
+  --psychic: rgba(251, 85, 132);
+  --ice: rgba(154, 214, 223);
+  --dark: rgba(117, 87, 76);
+  --fairy: rgba(230, 158, 172);
+  --normal: rgba(170, 166, 127);
+  --fighting: rgba(193, 34, 57);
+  --flying: rgba(168, 145, 236);
+  --poison: rgba(164, 62, 158);
+  --ground: rgba(222, 193, 107);
+  --bug: rgba(167, 183, 35);
+  --fire: rgba(245, 125, 49);
+  --electric: rgba(249, 207, 48);
+  --dragon: 112, 55, 255;
+}
+/* Dashboard */
+.background {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #fff url(../img/background.png);
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+/* Dashboard-content */
+.background .background-color {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.background-color.hide {
+  display: none;
+}
+.background-color .dex-overview {
+  box-sizing: border-box;
+  background: #fff url(../img/background.png);
+  clear: both;
+  display: block;
+  margin: 0 auto;
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+  padding: 140px 50px;
+}
+.dex-overview .dex-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: white;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 20px 15px;
+  border-radius: 25px;
+}
+.random {
+  width: calc(25% - 10px);
+}
+#newCard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 7px solid rgb(75, 75, 75);
+  border-radius: 15px;
+  width: 100%;
+  height: 30rem;
+  transition: var(--tran-03);
+  cursor: pointer;
+}
+#newCard i {
+  font-size: 3rem;
+  font-weight: 600;
+  color: rgb(75, 75, 75);
+  transition: var(--tran-03);
+}
+#newCard p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(75, 75, 75);
+  transition: var(--tran-03);
+  position: absolute;
+  top: 30px;
+}
+#newCard:hover {
+  border-color: black;
+}
+#newCard:hover p,
+#newCard:hover i {
+  color: black;
+}
+.poke-card {
+  position: relative;
+  width: calc(25% - 10px);
+  height: 30rem;
+  border-radius: 8px;
+  padding: 0.3rem;
+  transition: 0.5s ease-in-out;
+}
+.poke-card:hover {
+  cursor: pointer;
+  animation: cardHover 0.5s;
+}
+.poke-card:hover > .cardImg {
+  animation: rotate 5s infinite;
+}
+.top {
+  position: relative;
+  height: 120px;
+  padding: 0.5rem;
+}
+.cardImg {
+  position: absolute;
+  width: 120px;
+  top: 0;
+  right: 0;
+  animation: rotate 3s linear infinite;
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 0 0.8rem;
+}
+.pokeName {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 65%;
+}
+.pokeNumber {
+  font-size: 1.4rem;
+}
+.poke-image-placeholder {
+  display: flex;
+  justify-content: center;
+}
+.pokemon-image {
+  width: 110px;
+  height: 110px;
+}
+.data {
+  display: flex;
+  flex-flow: column;
+  gap: 5px;
+  align-items: center;
+  background-color: white;
+  height: calc(100% - 120px);
+  width: 100%;
+  border-radius: 8px;
+  padding-top: 1.5rem;
+}
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.types .type {
+  color: white;
+  padding: 0.4rem 0.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.types .type:nth-child(1) {
+  background: var(--ground);
+}
+.types .type:nth-child(2) {
+  background: var(--poison);
+}
+.stats {
+  width: 85%;
+  gap: 1rem;
+}
+.stat-row {
+  display: flex;
+}
+.stat-desc {
+  width: 22.5%;
+  color: var(--ground);
+  font-weight: 600;
+  text-align: right;
+  padding-right: 0.5rem;
+  border-right: 1px solid gray;
+}
+.stat-number {
+  width: 17.5%;
+  text-align: center;
+  font-weight: 600;
+}
+.stat-bar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+.bar-outer {
+  background-color: rgba(var(--dragon), 0.3);
+  display: flex;
+  width: 100%;
+  height: 0.6rem;
+  border-radius: 4px;
+  transition: var(--tran-05);
+}
+.bar-inner {
+  background-color: var(--ground);
+  width: 40%;
+  border-radius: 4px;
+  transition: var(--tran-05);
+}
+.baseStats {
+  color: var(--ground);
+  font-size: 1.2rem;
+}
+/* Media */
+@media (max-width: 1030px) {
+  .dex-container .dex-card-container {
+    width: calc(100% / 5 - 8px);
+  }
+}
+@media (max-width: 768px) {
+  .dex-container .dex-card-container {
+    width: calc(100% / 4 - 7.5px);
+  }
+}
+@media (max-width: 660px) {
+  .dex-container .dex-card-container {
+    width: calc(100% / 3 - 6.67px);
+    height: 180px;
+  }
+}
+@media (max-width: 525px) {
+  .dex-overview .dex-container {
+    gap: 20px 20px;
+  }
+  .dex-card-container .dex-card-img-bg {
+    width: 90%;
+    padding-top: 65%;
+  }
+  .dex-card-container .dex-card-number {
+    margin-left: 10%;
+  }
+  .dex-container .dex-card-container {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 850px) {
+  .nav-container img {
+    display: none;
+  }
+  .nav-container .med-1 {
+    background-color: var(--border-color-header2);
+    color: var(--black-light-color);
+    border-bottom: 5px solid var(--border-color-header2);
+    border-radius: 0px;
+  }
+  .nav-container .med-2 {
+    color: var(--black-light-color);
+    border-bottom: 5px solid var(--border-color-header3);
+    border-radius: 0px;
+  }
+}
