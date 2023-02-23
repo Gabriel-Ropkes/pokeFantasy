@@ -23,7 +23,6 @@ html {
   --tran-02: all 0.2s ease;
 }
 body {
-  overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
@@ -31,7 +30,6 @@ body {
   clear: both;
   display: block;
   margin: 0 auto;
-  max-width: 1280px;
   position: relative;
 }
 a {
@@ -66,9 +64,13 @@ ul {
   margin-bottom: 10px;
 }
 /* Page Bg */
+.background {
+  width: 100vw;
+  min-height: 100vh;
+}
 .background .background-color {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .background-color.hide {

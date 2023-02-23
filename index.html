@@ -20,10 +20,8 @@
     <link rel="stylesheet" href="css/pokedex.css" />
     <!-- CSS Pokemon-->
     <link rel="stylesheet" href="css/pokemon.css" />
-    <!-- CSS Responsivity -->
+    <!-- CSS Responsive -->
     <link rel="stylesheet" href="css/responsivity.css" />
-    <!-- CSS Common -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
     <!-- JS -->
     <script defer src="script.js"></script>
     <script defer src="js/dex.js"></script>
@@ -108,6 +106,49 @@
       <div id="backgroundPreview" class="view">
         <div class="closeBtnContainer">
           <i class="fas fa-xmark closeBtn"></i>
+        </div>
+        <div id="moveInfoBg" class="hide">
+          <div id="moveInfo" class="hide">
+            <ul id="attributesList">
+              <li class="attribute">
+                <span class="tcolor-red">Ember</span>
+              </li>
+              <li class="attribute">
+                <p>Power:</p>
+                <span class="tcolor-red">40</span>
+              </li>
+              <li class="attribute">
+                <p>PP:</p>
+                <span class="tcolor-red">6.20</span>
+              </li>
+              <li class="attribute">
+                <p>Acc:</p>
+                <span class="tcolor-red">100%</span>
+              </li>
+              <li class="attribute">
+                <p>Cd:</p>
+                <span class="tcolor-red">3s</span>
+              </li>
+            </ul>
+
+            <div id="move-icons">
+              <img class="cat" src="img/Physical.png" alt="" />
+              <p class="type ground">Ground</p>
+            </div>
+
+            <div id="move-desc">
+              <p>
+                Has a 50% chance to lower theasdfsadfsadfsadfas
+                sadfsadfdsaftarget's Defense by 1 stage.
+              </p>
+            </div>
+
+            <div id="move-effect">
+              <p class="tcolor-red">
+                This may also leave the target with a burn
+              </p>
+            </div>
+          </div>
         </div>
 
         <article id="movesetContainer">
@@ -273,24 +314,24 @@
                     <p>2</p>
                     <p>Water</p>
                     <p>Rock</p>
-                    <p>Groun</p>
+                    <p>Ground</p>
                   </div>
                   <div class="weakline">
                     <p>1</p>
-                    <p>Norm</p>
-                    <p>Elec</p>
+                    <p>Normal</p>
+                    <p>Electric</p>
                     <p>Fight</p>
-                    <p>Poisn</p>
-                    <p>Psyc</p>
+                    <p>Poison</p>
+                    <p>Psychic</p>
                     <p>Fly</p>
                     <p>Ghost</p>
-                    <p>Drago</p>
+                    <p>Dragon</p>
                     <p>Dark</p>
                   </div>
                   <div class="weakline">
                     <p>0.5</p>
                     <p>Fire</p>
-                    <p>Gras</p>
+                    <p>Grass</p>
                     <p>Ice</p>
                     <p>Bug</p>
                     <p>Steel</p>
@@ -312,6 +353,10 @@
               </div>
             </div>
             <div id="evoShiny">
+              <div id="evoShinyTitle">
+                <p>Evolutionary</p>
+                <p>Alternative Forms</p>
+              </div>
               <div id="evolineContent">
                 <div class="evolineImgContainer">
                   <img src="img/Gyarados.png" alt="" />
@@ -335,15 +380,67 @@
                   </div>
                 </div>
               </div>
-              <div id="shiny">
-                <img class="other-forms" src="img/Ponyta.png" alt="" />
-                <img class="other-forms" src="img/Growlithe.png" alt="" />
+              <div id="otherForm">
+                <div class="shiny">
+                  <img class="other-forms" src="img/Growlithe.png" alt="" />
+                  <i class="fas fa-star stars"></i>
+                </div>
+                <div class="shiny">
+                  <img class="other-forms" src="img/Growlithe.png" alt="" />
+                  <i class="fas fa-star stars"></i>
+                </div>
+                <div class="shiny">
+                  <img class="other-forms" src="img/Growlithe.png" alt="" />
+                  <i class="fas fa-star stars"></i>
+                </div>
               </div>
             </div>
           </div>
           <div id="previewDrop">
-            <ul class="commonList">
-              <p class="list-title">Todos os Drops</p>
+            <i id="dropMenu" class="fas fa-bars menu"></i>
+            <ul id="dropList" class="commonList">
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
+              <li class="list-row">
+                <img class="row-img" src="img/item.png" alt="" />
+                <div>
+                  <p class="row-name">SandBag</p>
+                  <p class="row-price">$365.00</p>
+                </div>
+              </li>
               <li class="list-row">
                 <img class="row-img" src="img/item.png" alt="" />
                 <div>
@@ -427,7 +524,30 @@
               </div>
             </div>
             <ul class="commonList">
-              <p class="list-title">Todos que Dropam</p>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
               <li class="list-row">
                 <img class="others-img" src="img/arcanine (1).png" alt="" />
                 <p class="row-name">Arcanine</p>
@@ -463,6 +583,7 @@
             </ul>
           </div>
           <div id="previewResp">
+            <i id="respMenu" class="fas fa-bars menu"></i>
             <ul id="respList" class="commonList">
               <li class="list-row">
                 <p class="resp-name">Route 17</p>
@@ -496,12 +617,59 @@
                 <p class="resp-name">Route 17</p>
                 <p class="resp-level">15 ~ 25</p>
               </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
+              <li class="list-row">
+                <p class="resp-name">Route 17</p>
+                <p class="resp-level">15 ~ 25</p>
+              </li>
             </ul>
-            <div id="previewContent">
+            <div id="respContent">
               <img class="respImg" src="img/mapa.webp" alt="" />
             </div>
             <ul class="commonList">
-              <p class="list-title">Todos que Dropam</p>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
+              <li class="list-row">
+                <img class="others-img" src="img/arcanine (1).png" alt="" />
+                <p class="row-name">Arcanine</p>
+              </li>
               <li class="list-row">
                 <img class="others-img" src="img/arcanine (1).png" alt="" />
                 <p class="row-name">Arcanine</p>

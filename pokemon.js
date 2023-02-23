@@ -43,10 +43,26 @@ toggleTitle.forEach((title) => {
     }
   });
 });
-const moves = document.querySelectorAll(".move-container");
+const moves = document.querySelectorAll(".move-container"),
+  moveInfo = document.getElementById("moveInfoBg"),
+  menuDrop = document.getElementById("dropMenu"),
+  menuResp = document.getElementById("respMenu"),
+  dropList = document.getElementById("dropList"),
+  respList = document.getElementById("respList");
 
 moves.forEach((move) => {
   move.addEventListener("click", () => {
-    moveInfo.classList.toggle("hide");
+    moveInfo.classList.remove("hide");
   });
+  moveInfo.addEventListener("click", () => {
+    moveInfo.classList.add("hide");
+  });
+});
+menuDrop.addEventListener("click", () => {
+  dropList.classList.toggle("view");
+  menuDrop.classList.toggle("open");
+});
+menuResp.addEventListener("click", () => {
+  respList.classList.toggle("view");
+  menuResp.classList.toggle("open");
 });

@@ -24,7 +24,7 @@
 }
 body {
   min-height: 100vh;
-  width: calc(100vw - 10px);
+  width: 100vw;
   overflow-x: hidden;
 }
 a {
@@ -98,7 +98,6 @@ ul {
   clear: both;
   display: block;
   margin: 0 auto;
-  max-width: 1280px;
   position: relative;
 }
 
@@ -134,7 +133,7 @@ ul {
   border-radius: 25px;
 }
 .random {
-  width: calc(25% - 10px);
+  width: calc(20% - 10px);
 }
 #newCard {
   position: relative;
@@ -171,7 +170,7 @@ ul {
 }
 .poke-card {
   position: relative;
-  width: calc(25% - 10px);
+  width: calc(20% - 10px);
   height: 30rem;
   border-radius: 8px;
   padding: 0.3rem;

@@ -1,1 +1,97 @@
-
+@media (max-width: 1100px) {
+  #previewPokeCard {
+    display: none;
+  }
+  .weak-ability {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  #evoShiny {
+    height: calc(100% - 40rem);
+  }
+  .shiny {
+    width: 85px;
+    height: 85px;
+  }
+  .evolineImgContainer {
+    width: 85px;
+    height: 85px;
+  }
+}
+@media (max-width: 850px) {
+  #dropContent,
+  #respContent {
+    width: calc(100% - 220px);
+  }
+}
+@media (max-width: 750px) {
+  #movesetContainer {
+    z-index: 5;
+  }
+}
+@media (max-width: 680px) {
+  #respList.commonList,
+  #dropList.commonList {
+    width: 120px;
+  }
+  #previewResp .commonList:nth-child(4),
+  #previewDrop .commonList:nth-child(4) {
+    display: none;
+  }
+  .commonList .list-row {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+  }
+  .list-row div {
+    width: 100%;
+  }
+  .list-row .row-name {
+    width: 100%;
+  }
+  #previewDrop .commonList .row-price {
+    display: none;
+  }
+  #previewResp .commonList .resp-level {
+    font-size: 1rem;
+  }
+  #previewResp .commonList .resp-name {
+    font-size: 1.5rem;
+  }
+  .list-row {
+    gap: 0;
+  }
+  #dropContent,
+  #respContent {
+    width: calc(100% - 125px);
+  }
+}
+@media (max-width: 600px) {
+  #respList.commonList,
+  #dropList.commonList {
+    position: absolute;
+    height: 0;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+  }
+  #respList.commonList.view,
+  #dropList.commonList.view {
+    height: 100%;
+    width: 100%;
+    padding-top: 60px;
+  }
+  #dropContent {
+    padding: 70px 10px 10px 10px;
+  }
+  #respList.commonList.view ~ #respContent,
+  #dropList.commonList.view ~ #dropContent {
+    display: none;
+  }
+  #respContent,
+  #dropContent {
+    width: 100%;
+  }
+}

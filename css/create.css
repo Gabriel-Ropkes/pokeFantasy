@@ -21,7 +21,6 @@ body {
   background: #9e9999 url(../img/background.png);
   clear: both;
   margin: 0 auto;
-  max-width: 1280px;
   position: relative;
 }
 #createContainer {
@@ -51,7 +50,7 @@ body {
   padding: 10px;
 }
 #create-card {
-  width: 12rem;
+  width: 15rem;
   height: 100%;
   border: 5px solid rgb(75, 75, 75);
   border-radius: 10px;
@@ -65,9 +64,10 @@ body {
   background-color: white;
 }
 #createImgLabel {
-  width: 10rem;
-  height: 40%;
+  width: 13rem;
+  height: 45%;
   border: 5px solid rgb(75, 75, 75);
+  background-color: white;
   border-radius: 15px;
   display: block;
   margin-bottom: 10px;
@@ -79,6 +79,7 @@ body {
   color: rgb(75, 75, 75);
   transition: 0.5s ease;
   font-weight: 600;
+  font-size: 1.3rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,6 +88,7 @@ body {
 }
 #createImgLabel:hover {
   border-color: black;
+  background-color: rgb(185, 180, 180);
 }
 #createImgLabel:hover #createImgContent {
   color: black;
@@ -108,6 +110,8 @@ body {
 }
 .create-stat-row .stat-text {
   width: 25%;
+  text-align: end;
+  padding-right: 10px;
   margin-right: 5px;
   border-right: 2px solid rgb(75, 75, 75);
 }
