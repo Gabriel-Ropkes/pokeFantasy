@@ -1,14 +1,50 @@
 @media (max-width: 1100px) {
-  #previewPokeCard {
-    display: none;
+  #previewInfo {
+    align-items: center;
+    justify-content: center;
   }
-  .weak-ability {
+  /* PokeCard - Preview */
+  #pokeCard {
+    display: none;
+    width: 220px;
+    height: 340px;
+  }
+  #pokeStatus {
+    height: 65%;
     width: 100%;
+    padding: 5px;
+  }
+  #pokeCard .stat-row {
+    height: calc(100% / 6);
+  }
+  #pokeCard .stat-bar {
+    width: 70%;
+    height: 50%;
+  }
+  #pokeCard .bar-outer {
+    height: 100%;
+  }
+  #pokeCard .types .type,
+  #pokeCard .baseStats {
+    font-size: 1.4rem;
+  }
+  #pokeCard .stat-desc,
+  #pokeCard .stat-number {
+    width: 12.5%;
+    font-size: 1.2rem;
+  }
+  /* WeakAbility - Preview*/
+  #weakAbility {
+    width: calc(100% - 20px);
+    margin: 70px auto 0 auto;
+  }
+  #previewInfo .menu {
+    display: flex;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 999px) {
   #evoShiny {
-    height: calc(100% - 40rem);
+    height: calc(100% - 45rem);
   }
   .shiny {
     width: 85px;
@@ -18,31 +54,116 @@
     width: 85px;
     height: 85px;
   }
-}
-@media (max-width: 850px) {
-  #dropContent,
+  #previewResp .commonList:nth-child(4) {
+    display: none;
+  }
   #respContent {
     width: calc(100% - 220px);
+  }
+  /* pokedex.css */
+  .poke-card {
+    width: calc(100% / 4 - 10px);
+  }
+  .random {
+    width: calc(100% / 4 - 10px);
+  }
+}
+@media (max-width: 850px) {
+  .special-list.view > .special-row-list {
+    height: calc(50% - 5px);
+  }
+  .special-row-list .special-row-principal {
+    visibility: visible;
+  }
+  #evoShiny {
+    height: auto;
+    padding-bottom: 40px;
+  }
+  #evolineContent,
+  #otherForm {
+    flex-flow: column;
+    margin-top: 20px;
+    row-gap: 10px;
+  }
+  #dropContent {
+    width: calc(100% - 220px);
+  }
+  #evoShiny {
+    display: none;
+  }
+  #weakAbility {
+    height: calc(100% - 60px);
+  }
+  #weakTitle {
+    height: auto;
+  }
+  #weaknesses {
+    height: 80%;
+  }
+  #weakContent {
+    display: flex;
+    height: 80%;
+  }
+  .weakline {
+    flex-flow: column;
+    width: calc(101% / 6);
+    height: 100%;
+    border: 1px solid black;
+  }
+  .weakline p,
+  .weakline h2 {
+    height: calc(100% / 11);
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  /* pokedex.css */
+  .poke-card {
+    width: calc(100% / 3 - 10px);
+  }
+  .random {
+    width: calc(100% / 3 - 10px);
   }
 }
 @media (max-width: 750px) {
   #movesetContainer {
     z-index: 5;
   }
-}
-@media (max-width: 680px) {
-  #respList.commonList,
-  #dropList.commonList {
+  #respList.commonList {
     width: 120px;
   }
-  #previewResp .commonList:nth-child(4),
-  #previewDrop .commonList:nth-child(4) {
-    display: none;
+  #respContent {
+    width: calc(100% - 120px);
+  }
+  #previewResp .commonList .resp-level {
+    font-size: 1rem;
+  }
+  #previewResp .commonList .resp-name {
+    font-size: 1.5rem;
   }
   .commonList .list-row {
     flex-wrap: wrap;
     height: auto;
     padding: 10px 0;
+  }
+}
+@media (max-width: 680px) {
+  #dropList.commonList {
+    width: 120px;
+  }
+  #respList.commonList {
+    position: absolute;
+    height: 0;
+    width: 100%;
+  }
+  #previewResp .menu {
+    display: flex;
+  }
+  #respContent {
+    width: 100%;
+  }
+  #previewDrop .commonList:nth-child(4) {
+    display: none;
   }
   .list-row div {
     width: 100%;
@@ -53,38 +174,46 @@
   #previewDrop .commonList .row-price {
     display: none;
   }
-  #previewResp .commonList .resp-level {
-    font-size: 1rem;
-  }
-  #previewResp .commonList .resp-name {
-    font-size: 1.5rem;
-  }
   .list-row {
     gap: 0;
   }
-  #dropContent,
-  #respContent {
+  #dropContent {
     width: calc(100% - 125px);
+  }
+  #abilitiesContent {
+    height: calc(20% - 30px);
+    flex-wrap: wrap;
+  }
+  #abilitiesTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+  }
+  .abilities {
+    width: calc(70% - 8px);
+  }
+  .ability {
+    height: 45%;
   }
 }
 @media (max-width: 600px) {
-  #respList.commonList,
+  #previewContainer {
+    opacity: 0;
+  }
+  #movesetContainer.hide ~ #previewContainer {
+    opacity: 1;
+  }
   #dropList.commonList {
     position: absolute;
     height: 0;
     width: 100%;
   }
-  .menu {
+  #previewDrop .menu {
     display: flex;
   }
-  #respList.commonList.view,
-  #dropList.commonList.view {
-    height: 100%;
-    width: 100%;
-    padding-top: 60px;
-  }
   #dropContent {
-    padding: 70px 10px 10px 10px;
+    padding: 85px 10px 10px 10px;
   }
   #respList.commonList.view ~ #respContent,
   #dropList.commonList.view ~ #dropContent {
@@ -92,6 +221,52 @@
   }
   #respContent,
   #dropContent {
+    width: 100%;
+  }
+  /* pokedex.css */
+  .poke-card {
+    width: calc(100% / 2 - 10px);
+  }
+  .random {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 450px) {
+  .special-row-title {
+    font-size: 2rem;
+  }
+  #weakContent {
+    width: 95%;
+  }
+  /* pokedex.css */
+  .dex-overview .dex-container {
+    justify-content: center;
+  }
+  .poke-card {
+    width: 75%;
+  }
+  .random {
+    width: 75%;
+  }
+}
+@media (max-width: 400px) {
+  #evoShinyTitle p:nth-child(2) {
+    display: none;
+  }
+  /* pokedex.css */
+  .poke-card {
+    width: 80%;
+  }
+  .random {
+    width: 80%;
+  }
+}
+@media (max-width: 350px) {
+  /* pokedex.css */
+  .poke-card {
+    width: 100%;
+  }
+  .random {
     width: 100%;
   }
 }

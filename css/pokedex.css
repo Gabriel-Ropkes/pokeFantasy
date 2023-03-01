@@ -22,6 +22,7 @@
   --tran-03: all 0.3s ease-in-out;
   --tran-02: all 0.2s ease-in-out;
 }
+
 body {
   min-height: 100vh;
   width: 100vw;
@@ -88,7 +89,7 @@ ul {
   --electric: rgba(249, 207, 48);
   --dragon: 112, 55, 255;
 }
-/* Dashboard */
+/* Background */
 .background {
   overflow-x: hidden;
   width: 100vw;
@@ -96,12 +97,12 @@ ul {
   box-sizing: border-box;
   background: #fff url(../img/background.png);
   clear: both;
+  position: relative;
+  /* Changed!!
   display: block;
   margin: 0 auto;
-  position: relative;
+  */
 }
-
-/* Dashboard-content */
 .background .background-color {
   width: 100%;
   min-height: 100vh;
@@ -110,7 +111,7 @@ ul {
 .background-color.hide {
   display: none;
 }
-.background-color .dex-overview {
+.dex-overview {
   box-sizing: border-box;
   background: #fff url(../img/background.png);
   clear: both;
@@ -121,7 +122,8 @@ ul {
   position: relative;
   padding: 140px 50px;
 }
-.dex-overview .dex-container {
+/* Container */
+.dex-container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -132,42 +134,7 @@ ul {
   padding: 20px 15px;
   border-radius: 25px;
 }
-.random {
-  width: calc(20% - 10px);
-}
-#newCard {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 7px solid rgb(75, 75, 75);
-  border-radius: 15px;
-  width: 100%;
-  height: 30rem;
-  transition: var(--tran-03);
-  cursor: pointer;
-}
-#newCard i {
-  font-size: 3rem;
-  font-weight: 600;
-  color: rgb(75, 75, 75);
-  transition: var(--tran-03);
-}
-#newCard p {
-  font-size: 2rem;
-  font-weight: 600;
-  color: rgb(75, 75, 75);
-  transition: var(--tran-03);
-  position: absolute;
-  top: 30px;
-}
-#newCard:hover {
-  border-color: black;
-}
-#newCard:hover p,
-#newCard:hover i {
-  color: black;
-}
+/* PokeCard */
 .poke-card {
   position: relative;
   width: calc(20% - 10px);
@@ -180,20 +147,10 @@ ul {
   cursor: pointer;
   animation: cardHover 0.5s;
 }
-.poke-card:hover > .cardImg {
-  animation: rotate 5s infinite;
-}
 .top {
   position: relative;
   height: 120px;
   padding: 0.5rem;
-}
-.cardImg {
-  position: absolute;
-  width: 120px;
-  top: 0;
-  right: 0;
-  animation: rotate 3s linear infinite;
 }
 .top-bar {
   display: flex;
@@ -210,6 +167,13 @@ ul {
 }
 .pokeNumber {
   font-size: 1.4rem;
+}
+.cardImg {
+  position: absolute;
+  width: 120px;
+  top: 0;
+  right: 0;
+  animation: rotate 3s linear infinite;
 }
 .poke-image-placeholder {
   display: flex;
@@ -237,17 +201,11 @@ ul {
 }
 .types .type {
   color: white;
-  padding: 0.4rem 0.5rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 10px;
   font-size: 1.2rem;
   font-weight: 600;
   text-transform: capitalize;
-}
-.types .type:nth-child(1) {
-  background: var(--ground);
-}
-.types .type:nth-child(2) {
-  background: var(--poison);
 }
 .stats {
   width: 85%;
@@ -255,6 +213,7 @@ ul {
 }
 .stat-row {
   display: flex;
+  align-items: center;
 }
 .stat-desc {
   width: 22.5%;
@@ -267,7 +226,7 @@ ul {
 .stat-number {
   width: 17.5%;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 .stat-bar {
   width: 60%;
@@ -291,52 +250,4 @@ ul {
 .baseStats {
   color: var(--ground);
   font-size: 1.2rem;
-}
-/* Media */
-@media (max-width: 1030px) {
-  .dex-container .dex-card-container {
-    width: calc(100% / 5 - 8px);
-  }
-}
-@media (max-width: 768px) {
-  .dex-container .dex-card-container {
-    width: calc(100% / 4 - 7.5px);
-  }
-}
-@media (max-width: 660px) {
-  .dex-container .dex-card-container {
-    width: calc(100% / 3 - 6.67px);
-    height: 180px;
-  }
-}
-@media (max-width: 525px) {
-  .dex-overview .dex-container {
-    gap: 20px 20px;
-  }
-  .dex-card-container .dex-card-img-bg {
-    width: 90%;
-    padding-top: 65%;
-  }
-  .dex-card-container .dex-card-number {
-    margin-left: 10%;
-  }
-  .dex-container .dex-card-container {
-    width: calc(100% / 2 - 10px);
-  }
-}
-@media (max-width: 850px) {
-  .nav-container img {
-    display: none;
-  }
-  .nav-container .med-1 {
-    background-color: var(--border-color-header2);
-    color: var(--black-light-color);
-    border-bottom: 5px solid var(--border-color-header2);
-    border-radius: 0px;
-  }
-  .nav-container .med-2 {
-    color: var(--black-light-color);
-    border-bottom: 5px solid var(--border-color-header3);
-    border-radius: 0px;
-  }
 }

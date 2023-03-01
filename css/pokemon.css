@@ -22,9 +22,9 @@ img {
   background: #f1eaea;
   border-radius: 5px;
 }
-#backgroundPreview {
+#pokemonPreview {
   position: relative;
-  display: flex;
+  display: none;
   justify-content: flex-start;
   align-items: center;
   width: 100vw;
@@ -141,7 +141,8 @@ img {
   visibility: hidden;
   opacity: 0;
 }
-#backgroundPreview.view {
+#pokemonPreview.view {
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -172,7 +173,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 70px;
   height: 100%;
   cursor: pointer;
   transition: 1s ease;
@@ -310,22 +311,94 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 5px 0 0 5px;
-  padding: 10px 25px;
 
   flex-wrap: wrap;
 }
-#previewPokeCard {
-  margin-left: 10px;
+.special-list {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.2s;
+}
+.special-row-list {
+  display: flex;
+  justify-content: space-between;
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+}
+.special-row-list .special-row-secondary {
+  width: calc(50% - 5px);
+  position: relative;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  overflow: hidden;
+  cursor: pointer;
+}
+.special-row-secondary:nth-child(2) {
+  border-right: none;
+  border-left: 2px solid black;
+}
+.special-row-list .special-row-principal {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  border-top: 2px solid black;
+  overflow: hidden;
+  cursor: pointer;
+}
+.special-row-secondary:hover img,
+.special-row-principal:hover img {
+  scale: 1.25;
+}
+.special-row-secondary img,
+.special-row-principal img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.special-list.view {
+  top: 60px;
+  height: calc(100% - 60px);
+}
+.special-list.view > .special-row-list {
+  width: 100%;
+  height: 100%;
+}
+.special-row-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(245, 173, 40, 0.8);
+}
+#pokeCard {
+  margin: 10px 0 0 20px;
   width: 200px;
-  background-color: rgb(224, 82, 26);
   animation: none;
 }
-.fire {
-  background-color: orange;
+.poke-card-preview {
+  width: 100%;
+  height: 100%;
 }
-.weak-ability {
+#weakAbility {
   height: 32rem;
-  width: calc(100% - 240px);
+  width: calc(100% - 260px);
+  margin: 10px 10px 0 0;
 }
 #weaknesses {
   width: 100%;
@@ -361,7 +434,8 @@ img {
   height: calc(100% / 6);
   border-bottom: 1px solid black;
 }
-.weakline p {
+.weakline p,
+.weakline h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,7 +455,7 @@ img {
 .weakline:nth-child(4) p {
   background-color: rgb(255, 69, 69);
 }
-.weakline p:nth-child(1) {
+.weakline h2 {
   background-color: #e12f40;
   color: white;
   width: 10%;
@@ -408,14 +482,22 @@ img {
 }
 .abilities {
   display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 5px;
+  width: calc(80% - 8px);
+  height: 100%;
+}
+.ability {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   min-width: 15%;
   padding: 0 5px;
-  max-width: 30%;
   background-color: rgb(172, 159, 159);
-  height: 80%;
+  height: 100%;
   font-size: 1.5rem;
   font-weight: 500;
   color: white;
@@ -426,15 +508,15 @@ img {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.abilities:hover {
+.ability:hover {
   background-color: rgb(75, 75, 75);
 }
 #evoShiny {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin-top: 10px;
-  height: calc(100% - 37rem);
+  width: calc(100% - 20px);
+  margin: 10px 10px 0 10px;
+  height: calc(100% - 40rem);
   column-gap: 10px;
   border-radius: 10px;
   border: 2px solid #e12f40;
@@ -457,7 +539,7 @@ img {
   justify-content: center;
   align-items: center;
   height: calc(100% - 30px);
-  width: 49%;
+  width: 46%;
   column-gap: 15px;
 }
 .evolineImgContainer {
@@ -546,12 +628,19 @@ img {
   overflow: hidden;
   border-radius: 3px 0 0 3px;
 }
+#respList.commonList.view,
+#dropList.commonList.view,
+#infoList.commonList.view {
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+}
 .menu {
   position: absolute;
   display: none;
   justify-content: center;
   align-items: center;
-  top: 0;
+  top: 5px;
   left: calc(50% - 35px);
   height: 60px;
   width: 60px;
@@ -564,15 +653,17 @@ img {
   background-color: #e12f40;
   z-index: 1;
 }
-.menu:hover {
-  background-color: #e12f40;
-  left: 0;
-  width: 100%;
-  border-radius: 0;
+#previewInfo .commonList {
+  position: absolute;
 }
+#previewInfo .commonList.view {
+  padding-top: 60px;
+  height: 100%;
+}
+.menu:hover,
 .menu.open {
-  background-color: #e12f40;
   left: 0;
+  top: 0;
   width: 100%;
   border-radius: 0;
 }

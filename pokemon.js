@@ -1,15 +1,21 @@
+/* PokemonPreview Update */
+const pokeNamePreview = document.getElementById("pokeName"),
+  pokeNumberPreview = document.getElementById("pokeNumber"),
+  pokeImgPreview = document.getElementById("pokeImg"),
+  pokeCardPreview = document.getElementById("pokeCard"),
+  typesPreview = document.getElementById("types");
+/* Moveset Container Only */
 const movesetContainer = document.getElementById("movesetContainer"),
   movesetTitle = document.getElementById("movesetTitle");
 
 movesetTitle.addEventListener("click", () => {
   movesetContainer.classList.toggle("hide");
 });
+
+/* Toggle Article Preview*/
 const toggleTitle = document.querySelectorAll(".toggleTitle");
 const closeBtn = document.querySelector(".closeBtn");
 
-closeBtn.addEventListener("click", () => {
-  togglePage();
-});
 const previewInfo = document.getElementById("previewInfo"),
   previewDrop = document.getElementById("previewDrop"),
   previewResp = document.getElementById("previewResp");
@@ -45,10 +51,12 @@ toggleTitle.forEach((title) => {
 });
 const moves = document.querySelectorAll(".move-container"),
   moveInfo = document.getElementById("moveInfoBg"),
-  menuDrop = document.getElementById("dropMenu"),
-  menuResp = document.getElementById("respMenu"),
+  dropMenu = document.getElementById("dropMenu"),
   dropList = document.getElementById("dropList"),
-  respList = document.getElementById("respList");
+  respMenu = document.getElementById("respMenu"),
+  respList = document.getElementById("respList"),
+  infoMenu = document.getElementById("infoMenu"),
+  infoList = document.getElementById("infoList");
 
 moves.forEach((move) => {
   move.addEventListener("click", () => {
@@ -58,11 +66,50 @@ moves.forEach((move) => {
     moveInfo.classList.add("hide");
   });
 });
-menuDrop.addEventListener("click", () => {
+closeMenuDrop = () => {
   dropList.classList.toggle("view");
-  menuDrop.classList.toggle("open");
-});
-menuResp.addEventListener("click", () => {
+  dropMenu.classList.toggle("open");
+};
+closeMenuResp = () => {
   respList.classList.toggle("view");
-  menuResp.classList.toggle("open");
+  respMenu.classList.toggle("open");
+};
+closeMenuInfo = () => {
+  infoList.classList.toggle("view");
+  infoMenu.classList.toggle("open");
+};
+dropMenu.addEventListener("click", () => {
+  closeMenuDrop();
 });
+respMenu.addEventListener("click", () => {
+  closeMenuResp();
+});
+infoMenu.addEventListener("click", () => {
+  closeMenuInfo();
+});
+const spRowWeaknesses = document.getElementById("spRowWeaknesses"),
+  spRowPokeCard = document.getElementById("spRowPokeCard"),
+  spRowEvolutionary = document.getElementById("spRowEvolutionary"),
+  pokeCard = document.getElementById("pokeCard"),
+  weakAbility = document.getElementById("weakAbility"),
+  evoShiny = document.getElementById("evoShiny");
+
+spRowPokeCard.addEventListener("click", () => {
+  pokeCard.style.display = "block";
+  weakAbility.style.display = "none";
+  evoShiny.style.display = "none";
+  closeMenuInfo();
+});
+spRowWeaknesses.addEventListener("click", () => {
+  weakAbility.style.display = "block";
+  pokeCard.style.display = "none";
+  evoShiny.style.display = "none";
+  closeMenuInfo();
+});
+spRowEvolutionary.addEventListener("click", () => {
+  evoShiny.style.display = "flex";
+  pokeCard.style.display = "none";
+  weakAbility.style.display = "none";
+  closeMenuInfo();
+});
+uptadePreview = () => {};

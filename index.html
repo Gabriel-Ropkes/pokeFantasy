@@ -23,14 +23,13 @@
     <!-- CSS Responsive -->
     <link rel="stylesheet" href="css/responsivity.css" />
     <!-- JS -->
-    <script defer src="script.js"></script>
     <script defer src="js/dex.js"></script>
     <script defer src="pokemon.js"></script>
     <title>PokeFantasy</title>
   </head>
   <body>
     <!-- Header -->
-    <nav class="hide">
+    <nav>
       <p class="announce">Este site não é Oficial</p>
       <ul class="nav-container">
         <a href="home.html">
@@ -57,17 +56,10 @@
       <!-- Change After -->
     </nav>
 
-    <section class="background">
-      <section id="pokedex" class="background-color hide">
+    <div class="background">
+      <section id="pokedex" class="background-color">
         <div class="dex-overview">
-          <div id="dexContainer" class="dex-container">
-            <a href="create.html" class="random">
-              <div id="newCard">
-                <p>New Card</p>
-                <i class="fas fa-plus"></i>
-              </div>
-            </a>
-          </div>
+          <section id="dexContainer" class="dex-container"></section>
         </div>
         <footer>
           <section class="random">
@@ -103,7 +95,7 @@
           </section>
         </footer>
       </section>
-      <div id="backgroundPreview" class="view">
+      <section id="pokemonPreview" class="">
         <div class="closeBtnContainer">
           <i class="fas fa-xmark closeBtn"></i>
         </div>
@@ -223,101 +215,44 @@
               <p>Resp</p>
             </div>
           </div>
-          <div id="previewInfo">
-            <div id="previewPokeCard" class="poke-card">
-              <div id="top" class="top">
-                <div id="topBar" class="top-bar">
-                  <p id="pokeName" class="pokeName">Growlithe</p>
-                  <p id="pokeNumber" class="pokeNumber">#058</p>
+          <article id="previewInfo">
+            <i id="infoMenu" class="fas fa-bars menu"></i>
+            <ul id="infoList" class="special-list">
+              <li class="special-row-list">
+                <div id="spRowPokeCard" class="special-row-secondary">
+                  <img src="img/PokéFantasy.png" alt="" />
+                  <span class="special-row-title">PokéCard</span>
                 </div>
-                <div class="poke-image-placeholder" id="pokeImgBg">
-                  <img
-                    class="pokemon-image"
-                    src="img/Arcanine.png"
-                    id="pokeImg"
-                  />
+                <div id="spRowWeaknesses" class="special-row-secondary">
+                  <img src="img/background-preview.webp" alt="" />
+                  <span class="special-row-title">Weaknesses</span>
                 </div>
-              </div>
-              <div id="data" class="data">
-                <div id="types" class="types">
-                  <div class="type fire">Fire</div>
+              </li>
+              <li class="special-row-list">
+                <div id="spRowEvolutionary" class="special-row-principal">
+                  <img src="img/notice.png" alt="" />
+                  <span class="special-row-title">Evolutionary</span>
                 </div>
-                <h4 id="statsTitle" class="baseStats">Base Stats</h4>
-                <div id="pokeStatus" class="stats">
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="stat-row">
-                    <p class="stat-desc">Hp</p>
-                    <p class="stat-number">90</p>
-                    <div class="stat-bar">
-                      <div class="bar-outer">
-                        <div class="bar-inner"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="weak-ability">
+              </li>
+            </ul>
+            <div id="pokeCard" class="poke-card"></div>
+            <div id="weakAbility">
               <div id="weaknesses">
                 <div id="weakTitle">
-                  <p>Weakness</p>
+                  <h2>Weakness</h2>
                 </div>
                 <div id="weakContent">
                   <div class="weakline">
-                    <p>4</p>
+                    <h2>4x</h2>
                   </div>
                   <div class="weakline">
-                    <p>2</p>
+                    <h2>2x</h2>
                     <p>Water</p>
                     <p>Rock</p>
                     <p>Ground</p>
                   </div>
                   <div class="weakline">
-                    <p>1</p>
+                    <h2>1x</h2>
                     <p>Normal</p>
                     <p>Electric</p>
                     <p>Fight</p>
@@ -329,7 +264,7 @@
                     <p>Dark</p>
                   </div>
                   <div class="weakline">
-                    <p>0.5</p>
+                    <h2>0.5x</h2>
                     <p>Fire</p>
                     <p>Grass</p>
                     <p>Ice</p>
@@ -338,24 +273,26 @@
                     <p>Fairy</p>
                   </div>
                   <div class="weakline">
-                    <p>0.25</p>
+                    <h2>0.25x</h2>
                   </div>
                   <div class="weakline">
-                    <p>0</p>
+                    <h2>0x</h2>
                   </div>
                 </div>
               </div>
               <div id="abilitiesContent">
-                <p id="abilitiesTitle">Abilities</p>
-                <p class="abilities">Wonder Guard</p>
-                <p class="abilities">Guts</p>
-                <p class="abilities">Superpower</p>
+                <h3 id="abilitiesTitle">Abilities</h3>
+                <div class="abilities">
+                  <p class="ability">Wonder Guard</p>
+                  <p class="ability">Guts</p>
+                  <p class="ability">Superpower</p>
+                </div>
               </div>
             </div>
             <div id="evoShiny">
               <div id="evoShinyTitle">
                 <p>Evolutionary</p>
-                <p>Alternative Forms</p>
+                <p>Alternative</p>
               </div>
               <div id="evolineContent">
                 <div class="evolineImgContainer">
@@ -395,8 +332,8 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div id="previewDrop">
+          </article>
+          <article id="previewDrop">
             <i id="dropMenu" class="fas fa-bars menu"></i>
             <ul id="dropList" class="commonList">
               <li class="list-row">
@@ -581,7 +518,7 @@
                 <p class="row-name">Arcanine</p>
               </li>
             </ul>
-          </div>
+          </article>
           <div id="previewResp">
             <i id="respMenu" class="fas fa-bars menu"></i>
             <ul id="respList" class="commonList">
@@ -705,7 +642,7 @@
             </ul>
           </div>
         </section>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
 </html>

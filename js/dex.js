@@ -1,6 +1,7 @@
-const backgroundPreview = document.getElementById("backgroundPreview"),
+const typeInnerText = [];
+const pokemonPreview = document.getElementById("pokemonPreview"),
   nav = document.querySelector("nav"),
-  backgroundColor = document.querySelector(".background-color");
+  pokedex = document.getElementById("pokedex");
 let getnav = localStorage.getItem("nav");
 if (getnav && getnav === "active") {
   nav.classList.add("nav-active");
@@ -16,79 +17,39 @@ window.addEventListener("scroll", () => {
     localStorage.removeItem("nav", "active");
   }
 });
+/* See After
 chooseDrop = () => {
   dropList.classList.toggle("hide");
   dropInfo.classList.toggle("view");
 };
+*/
+
 togglePage = () => {
   nav.classList.toggle("hide");
-  backgroundPreview.classList.toggle("view");
-  backgroundColor.classList.toggle("hide");
+  pokemonPreview.classList.toggle("view");
+  pokedex.classList.toggle("hide");
 };
-const title = document.querySelector("#title");
-createPreview = () => {
-  let containerTitle = createElement("div");
-  let title = createElement("p");
-  let closeBtn = createElement("i");
-
-  let previewInfo = createElement("div");
-  let previewPokeCard = createElement("div");
-  let previewCardImgBg = createElement("div");
-  let previewCardImg = createElement("img");
-  let previewTypes = createElement("div");
-  let previewAbilities = createElement("input");
-  let previewEvoline = createElement("div");
-
-  containerTitle.classList.add("container-title");
-  title.classList.add("title");
-  closeBtn.classlist.add("fas fa-xmark close-btn");
-  previewInfo.classList.add("container-info"); /* Mudar */
-  previewPokeCard.classList.add("preview-poke-card"); /* Mudar */
-  previewCardImgBg.classlist.add("preview-card-img-bg"); /* Mudar */
-  previewCardImg.classlist.add("preview-card-img"); /* Mudar */
-  previewTypes.classList.add("preview-types");
-  previewAbilities.classList.add("abilities");
-  previewEvoline.classlist.add("preview-evoline"); /* Mudar */
-
-  containerTitle.appendChild(title);
-  containerTitle.appendChild(closeBtn);
-  previewInfo.appendChild(previewPokeCard);
-  previewPokeCard.appendChild(previewCardImgBg);
-  previewCardImgBg.appendChild(previewCardImg);
-
-  for (t = 0; t < pokemones[i].types.length; t++) {
-    let previewType = createElement("p");
-    previewType.classList.add("type");
-    previewType.style.color = pokemones.color[t];
-    previewType.innerText = pokemones[i].name;
-    previewTypes.appendChild(previewType);
-  }
-  for (e = 0; e < pokemones[i].evoline.length; e++) {
-    let evolineImg = createElement("img"); /* Retirei o HREF, COnsertar dps */
-    evolineImg = pokemones[i].evoline[e];
-    evolineImg.src = `img/${evolineImg}.png`;
-    previewEvoline.appendChild(evolineImg);
-  }
-};
-const typeColors = {
-  Rock: [182, 158, 49],
-  Ghost: [112, 85, 155],
-  Steel: [183, 185, 208],
-  Water: [100, 147, 235],
-  Grass: [76, 203, 72],
-  Psychic: [251, 85, 132],
-  Ice: [154, 214, 223],
-  Dark: [117, 87, 76],
-  Fairy: [230, 158, 172],
-  Normal: [170, 166, 127],
-  Fighting: [193, 34, 57],
-  Flying: [168, 145, 236],
-  Poison: [164, 62, 158],
-  Ground: [222, 193, 107],
-  Bug: [167, 183, 35],
-  Fire: [245, 125, 49],
-  Electric: [249, 207, 48],
-  Dragon: [112, 55, 255],
+const typeWeakness = {
+  Rock: [0.5, 0.5, 2, 1, 2, 1, 2, 0.5, 2, 0.5, 1, 1, 1, 1, 1, 1, 2, 1],
+  Ghost: [0, 1, 1, 1, 1, 1, 0, 0.5, 1, 1, 1, 0.5, 1, 2, 1, 2, 1, 1],
+  Steel: [
+    0.5, 2, 1, 1, 0.5, 0.5, 2, 0, 2, 0.5, 0.5, 0.5, 0.5, 1, 0.5, 1, 0.5, 0.5,
+  ],
+  Water: [1, 0.5, 0.5, 2, 2, 0.5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 1],
+  Grass: [1, 2, 0.5, 0.5, 0.5, 2, 1, 2, 0.5, 2, 1, 2, 1, 1, 1, 1, 1, 1],
+  Psychic: [1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 0.5, 2, 1, 2, 1, 2, 1, 1],
+  Ice: [1, 2, 1, 1, 1, 0.5, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1],
+  Dark: [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 2, 1, 0.5, 1, 0.5, 1, 2],
+  Fairy: [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 0, 2, 1, 0.5, 1, 0.5, 1, 2],
+  Normal: [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1],
+  Fighting: [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 0.5, 0.5, 1, 1, 0.5, 1, 2],
+  Flying: [1, 1, 1, 2, 0.5, 2, 0.5, 1, 0, 1, 1, 0.5, 2, 1, 1, 1, 1, 1],
+  Poison: [1, 1, 1, 1, 0.5, 1, 0.5, 0.5, 2, 1, 2, 0.5, 1, 1, 1, 1, 1, 0.5],
+  Ground: [1, 1, 2, 0, 2, 2, 1, 0.5, 1, 1, 1, 1, 0.5, 1, 1, 1, 1, 1],
+  Bug: [1, 2, 1, 1, 0.5, 1, 0.5, 1, 0.5, 2, 1, 1, 2, 1, 1, 1, 1, 1],
+  Fire: [1, 0.5, 2, 1, 0.5, 0.5, 1, 1, 2, 1, 1, 0.5, 2, 1, 1, 1, 0.5, 0.5],
+  Electric: [1, 1, 1, 0.5, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 1, 0.5, 1],
+  Dragon: [1, 0.5, 0.5, 0.5, 0.5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2],
 };
 const dexContainer = document.getElementById("dexContainer"),
   types = document.querySelectorAll(".types"),
@@ -144,19 +105,18 @@ let pokemon5 = new pokemon(
   ["Fire"],
   [60, 60, 60, 40, 50, 100]
 );
-let pokemon6 = new pokemon();
 const pokemones = [pokemon1, pokemon2, pokemon3, pokemon4, pokemon5];
 console.log("pokemon" + (pokemones.length + 1));
 for (var i = 0; i < pokemones.length; i++) {
   let pokeCard = document.createElement("article");
   let top = document.createElement("div");
   let topBar = document.createElement("div");
-  let pokeName = document.createElement("p");
-  let pokeNumber = document.createElement("p");
+  let pokeName = document.createElement("span");
+  let pokeNumber = document.createElement("span");
   let pokeImgBg = document.createElement("div");
   let pokeImg = document.createElement("img");
   let cardImg = document.createElement("img");
-  let data = document.createElement("div");
+  let data = document.createElement("section");
   let types = document.createElement("div");
   let statsTitle = document.createElement("h4");
   let pokeStatus = document.createElement("div");
@@ -174,7 +134,6 @@ for (var i = 0; i < pokemones.length; i++) {
   cardImg.classList.add("cardImg");
   pokeImg.src = `img/${pokemones[i].name}.png`;
   cardImg.src = "img/pokeball.png";
-  console.log(pokeStatus);
 
   pokeCard.appendChild(top);
   pokeCard.appendChild(data);
@@ -229,15 +188,56 @@ for (var i = 0; i < pokemones.length; i++) {
     type.style.backgroundColor = pokemones[i].color[t];
     type.innerText = pokemones[i].types[t];
     types.appendChild(type);
+    typeInnerText[t] = type.innerText;
+    console.log(typeInnerText[t]);
   }
+  /* Função para quando clicar em um Pokémon */
   pokeCard.addEventListener("click", (e) => {
     togglePage();
-    title.innerText = pokeName.innerText;
-    console.log(pokeName.innerText);
+    /* PokeCard */
+    pokeCard.classList.add("poke-card-preview");
+    pokeCardPreview.appendChild(pokeCard);
+    console.log(pokeCardPreview);
+
+    closeBtn.addEventListener("click", () => {
+      pokeCard.classList.remove("poke-card-preview");
+      dexContainer.appendChild(pokeCard);
+      togglePage();
+      pokeCardPreview.appendChild.remove(pokeCard);
+    });
+    /* Weakness */
+    for (i = 0; i < 18; i++) {
+      if (types[1] == false || types[2] == undefined) {
+        weak = typeWeakness[pokemones[1].types[0]][i] * 1;
+      }
+      weak =
+        typeWeakness[pokemones[1].types[0]][i] *
+        typeWeakness[pokemones[2].types[0]][i];
+    }
   });
 }
 
 /*
+const typeColors = {
+  Rock: [182, 158, 49],
+  Ghost: [112, 85, 155],
+  Steel: [183, 185, 208],
+  Water: [100, 147, 235],
+  Grass: [76, 203, 72],
+  Psychic: [251, 85, 132],
+  Ice: [154, 214, 223],
+  Dark: [117, 87, 76],
+  Fairy: [230, 158, 172],
+  Normal: [170, 166, 127],
+  Fighting: [193, 34, 57],
+  Flying: [168, 145, 236],
+  Poison: [164, 62, 158],
+  Ground: [222, 193, 107],
+  Bug: [167, 183, 35],
+  Fire: [245, 125, 49],
+  Electric: [249, 207, 48],
+  Dragon: [112, 55, 255],
+};
 const fetchApi = async (pokemonName) => {
   pokemonNameApi = pokemonName.split(" ").join("-");
   const response = await fetch(
